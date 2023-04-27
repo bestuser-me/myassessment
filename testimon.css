@@ -1,0 +1,240 @@
+:root{
+    --maincolor: rgb(66, 66, 230);
+    --white: #fff;
+    --grey: rgb(201, 200, 200);
+    --label: rgb(45, 128, 167);
+    --yellow: rgb(219, 219, 63);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+}
+
+h1{
+    line-height: 1.5;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 2.5rem;
+    z-index: 10;
+    color: var(--white);
+    background: transparent; 
+    /* shu yerni rasm qoygandan keyin ozgartir */
+}
+
+.navbar-image a {
+    letter-spacing: 2.5;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navbar-menu{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-menu a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.menu-toggle .bar{
+    width: 15px;
+    height: 2px;
+    margin: 3px auto;
+    transition: all 0.3 ease-in-out;
+    background-color: var(--white);
+    cursor: pointer;
+}
+ 
+
+.testimoni{
+    width: 100%;
+    text-align: center;
+    padding: 5rem 1rem;
+    background-color: var(--maincolor);
+    color: --white;
+}
+.swiper-wrapper{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.swiper{
+    width:100%;
+    height: 400px;
+    margin-top: 2rem;
+}
+.swiper-slide{
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    box-shadow: rgba(50,50,93,0.25) 0px 13px 27px -5px, rgba(0,0,0,0.3) 0px 8px 16px -8px;
+    color: black;
+}
+
+.swiper-slide i{
+    font-size: 40px;
+    color: --yellow;
+    margin-bottom: 1rem;
+
+}
+
+.swiper-slide h3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.testimoni-pic{
+    padding: 1rem;
+}
+
+.testimoni-pic img{
+    display: block;
+    margin: 1em 10em;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: var(--maincolor);
+    color: var(--white);
+    padding: 0rem;
+}
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.footer-wrapper h3, 
+.footer-wrapper h4{
+    line-height: 3;
+    color: var(--yellow);
+}
+
+.footer-wrapper p{
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+.social-media{
+    margin-top: 1rem;
+}
+
+.social-media a{
+    text-decoration: none;
+    color: var(--grey);
+    margin-right: 10px;
+}
+
+.footer-wrapper a{
+    text-decoration: none;
+    color: var(--grey);
+    line-height: 2;
+}
+
+.footer-wrapper a:hover{
+    text-decoration: underline;
+}
+@media screen and (max-width:768px) {
+    .testimoni-pic img{
+        transform: translateX(-50px);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    menu-toggle,
+    .bar{
+        display: block;
+        z-index: 3;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(1){
+        transform: translateY(5px) rotate(45deg);
+    }
+    .menu-toggle.is-active .bar:nth-child(3){
+        transform: translateY(-5px) rotate(-45deg);
+    }
+
+    .navbar-menu{
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        background-color: black;
+        display: none;
+        padding: 5rem;
+    }
+
+    .navbar-menu.active{
+        display: flex;
+    }
+
+    .navbar-menu a{
+        color: var(--white);
+        padding: 1.5rem;
+    }
+
+    .h-title{
+        font-size: 38px;
+    }
+
+    .job-label{
+        display: none;
+    }
+    .testimoni-pic{
+        transform: translateX(-100px);
+    }
+}
+
+@media screen and (max-width: 480px){
+    .job-posted{
+        display: none;
+    }
+}
