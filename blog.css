@@ -180,7 +180,7 @@ footer{
 }
 
 @media screen and (max-width: 600px) {
-    menu-toggle,
+    .menu-toggle,
     .bar{
         display: block;
         z-index: 3;
