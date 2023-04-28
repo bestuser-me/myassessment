@@ -65,3 +65,9 @@ mobileLink.addEventListener("click", function(){
     }
 })
 
+
+// Button click 
+const btn=document.querySelector('menu-toggle')
+btn.addEventListener('click',()=>{
+    console.log('clicked')
+})
